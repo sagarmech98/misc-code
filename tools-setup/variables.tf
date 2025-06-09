@@ -10,5 +10,5 @@ variable "rg_name" {
   default = "Project"
 }
 variable "rg_location" {
-  default = "UK West"
+  default = "UK west"
 }
