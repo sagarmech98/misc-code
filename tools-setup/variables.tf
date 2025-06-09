@@ -1,7 +1,7 @@
 variable "tools" {
   default = {
     vault = {
-      vm_size = "Standard_B2als_v2"
+      vm_size = "Standard_E2s_v3"
     }
   }
 }
