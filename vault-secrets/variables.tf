@@ -5,6 +5,9 @@ variable "secrets" {
     roboshop-dev = {
       description = "RoboShop App Component All secrets"
     }
+    roboshop-infra = {
+      description = "Roboshop Infra related secrets"
+    }
   }
 }
 
@@ -15,6 +18,13 @@ variable "values" {
       value = {
         zip = "zap",
         foo = "bar"
+      }
+    }
+    ssh = {
+      secret = "roboshop-infra"
+      value = {
+        username = "testing"
+        password = "Password@1234"
       }
     }
   }
