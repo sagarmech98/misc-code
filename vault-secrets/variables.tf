@@ -40,6 +40,8 @@ variable "values" {
       value = {
         CART_ENDPOINT="cart-dev.vidyapractice.shop:8080"
         DB_HOST="mysql-dev.vidyapractice.shop"
+        username = "root"
+        password = "RoboShop@1"
       }
     }
     payment = {
