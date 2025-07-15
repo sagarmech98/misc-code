@@ -24,8 +24,12 @@ variable "values" {
     catalogue = {
       secret = "roboshop-dev"
       value = {
-        MONGO="true"
-        MONGO_URL="mongodb://mongodb-dev.vidyapractice.shop:27017/catalogue"
+        MONGO       = "true"
+        MONGO_URL   = "mongodb://mongodb-dev..vidyapractice.shop:27017/catalogue"
+        DB_TYPE     = "mongo"
+        APP_GIT_URL = "https://github.com/roboshop-devops-project-v3/catalogue"
+        DB_HOST     = "mongodb-dev..vidyapractice.shop"
+        SCHEMA_FILE = "db/master-data.js"
       }
     }
     user = {
@@ -39,10 +43,14 @@ variable "values" {
     shipping = {
       secret = "roboshop-dev"
       value = {
-        CART_ENDPOINT="cart-dev.vidyapractice.shop:8080"
-        DB_HOST="mysql-dev.vidyapractice.shop"
-        username = "root"
-        password = "RoboShop@1"
+        CART_ENDPOINT = "cart-dev.vidyapractice.shop:8080"
+        DB_HOST       = "mysql-dev.vidyapractice.shop.online"
+        DB_USER       = "root"
+        DB_PASS       = "RoboShop@1"
+        username      = "root"
+        password      = "RoboShop@1"
+        DB_TYPE       = "mysql"
+        APP_GIT_URL   = "https://github.com/roboshop-devops-project-v3/shipping"
       }
     }
     payment = {
@@ -66,6 +74,16 @@ variable "values" {
         cart_url      = "http://cart-dev.vidyapractice.shop:8080/"
         payment_url   = "http://payment-dev.vidyapractice.shop:8080/"
         shipping_url  = "http://shipping-dev.vidyapractice.shop:8080/"
+        CATALOGUE_HOST = "catalogue-dev.vidyapractice.shop"
+        CATALOGUE_PORT = 8080
+        USER_HOST      = "user-dev.vidyapractice.shop"
+        USER_PORT      = 8080
+        CART_HOST      = "cart-dev.vidyapractice.shop"
+        CART_PORT      = 8080
+        SHIPPING_HOST  = "shipping-dev.vidyapractice.shop"
+        SHIPPING_PORT  = 8080
+        PAYMENT_HOST   = "payment-dev.vidyapractice.shop"
+        PAYMENT_PORT   = 8080
       }
     }
     rabbitmq = {
