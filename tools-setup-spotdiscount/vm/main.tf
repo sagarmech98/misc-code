@@ -13,7 +13,7 @@ resource "azurerm_network_interface" "privateip" {
 
   ip_configuration {
     name                          = var.name  
-    subnet_id                     = "/subscriptions/0c682c46-356a-40af-9528-6df4181da743/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
+    subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.publicip.id
   }
@@ -21,7 +21,7 @@ resource "azurerm_network_interface" "privateip" {
 
 resource "azurerm_network_interface_security_group_association" "nsg-attach" {
   network_interface_id      = azurerm_network_interface.privateip.id
-  network_security_group_id = "/subscriptions/0c682c46-356a-40af-9528-6df4181da743/resourceGroups/Project/providers/Microsoft.Network/networkSecurityGroups/allow-all"
+  network_security_group_id = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/networkSecurityGroups/allow-all"
 }
 
 
@@ -41,7 +41,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
     storage_account_type  = "Standard_LRS"
   }
 
-  source_image_id = "/subscriptions/0c682c46-356a-40af-9528-6df4181da743/resourceGroups/Project/providers/Microsoft.Compute/images/devops-practice-image"
+  source_image_id = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Compute/images/devops-practice-image"
 
  # Spot Details
   priority        = "Spot"
