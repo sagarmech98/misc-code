@@ -5,7 +5,7 @@ provider "azurerm" {
 
 
 resource "azurerm_storage_account" "tfstate" {
-  name                     = "stgdevtfstates"
+  name                     = "stgdevtfst"
   resource_group_name      = "Project-Robo"
   location                 = "Denmark East"
   account_tier             = "Standard"
