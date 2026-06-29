@@ -12,7 +12,7 @@ resource "azurerm_network_interface" "privateip" {
 
   ip_configuration {
     name                          = var.name  
-    subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/virtualNetworks/Project-VN/subnets/default"
+    subnet_id                     = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project-Robo/providers/Microsoft.Network/virtualNetworks/Project-Robo-VN/subnets/default"                              
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.publicip.id
   }

@@ -7,8 +7,8 @@ variable "tools" {
 }
 
 variable "rg_name" {
-  default = "Project"
+  default = "Project-Robo"
 }
 variable "rg_location" {
-  default = "Uk West"
+  default = "Denmark East"
 }

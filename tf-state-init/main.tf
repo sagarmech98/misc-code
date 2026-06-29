@@ -9,7 +9,7 @@ resource "azurerm_storage_account" "tfstate" {
   resource_group_name      = "Project-Robo"
   location                 = "Denmark East"
   account_tier             = "Standard"
-  account_replication_type = "GRS"
+  account_replication_type = "LRS"
 }
 
 resource "azurerm_storage_container" "tfstate" {
