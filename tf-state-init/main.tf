@@ -5,11 +5,11 @@ provider "azurerm" {
 
 
 resource "azurerm_storage_account" "tfstate" {
-  name                     = "stgdevtfst"
-  resource_group_name      = "Project-Robo"
-  location                 = "Denmark East"
+  name                     = "stgdevtfstates"
+  resource_group_name      = "Project"
+  location                 = "Uk West"
   account_tier             = "Standard"
-  account_replication_type = "LRS"
+  account_replication_type = "GRS"
 }
 
 resource "azurerm_storage_container" "tfstate" {
