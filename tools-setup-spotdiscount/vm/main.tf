@@ -19,23 +19,9 @@ resource "azurerm_network_interface" "privateip" {
   }
 }
 
-#resource "azurerm_network_interface_security_group_association" "nsg-attach" {
-#  network_interface_id      = azurerm_network_interface.privateip.id
-#  network_security_group_id = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/networkSecurityGroups/allow-all-robo"
-#}
-resource "azurerm_network_security_rule" "allow_vault_8200" {
-  name                        = "Allow-Vault-8200"
-  priority                    = 310
-  direction                   = "Inbound"
-  access                      = "Allow"
-  protocol                    = "Tcp"
-  source_port_range           = "*"
-  destination_port_range      = "8200"
-  source_address_prefix       = "*"
-  destination_address_prefix  = "*"
-
-  resource_group_name         = azurerm_resource_group.rg.name
-  network_security_group_name = azurerm_network_security_group.nsg.name
+resource "azurerm_network_interface_security_group_association" "nsg-attach" {
+  network_interface_id      = azurerm_network_interface.privateip.id
+  network_security_group_id = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Network/networkSecurityGroups/allow-all-robo"
 }
 
 
