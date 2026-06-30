@@ -34,6 +34,10 @@ resource "azurerm_linux_virtual_machine" "vm" {
   admin_username                  = "testing"
   admin_password                  = "Password@1234"
   disable_password_authentication = false
+  
+  #security_type       = "TrustedLaunch"
+  secure_boot_enabled = true
+  vtpm_enabled        = true
 
   os_disk {
     name                  = "${var.name}-disk"
@@ -41,7 +45,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
     storage_account_type  = "Standard_LRS"
   }
 
-  source_image_id = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Compute/galleries/test/images/test"
+  source_image_id = "/subscriptions/72129bc2-1be7-4c6e-971e-9375ebd6c232/resourceGroups/Project/providers/Microsoft.Compute/galleries/test/images/test/versions/0.0.1"
 
  # Spot Details
   priority        = "Spot"
