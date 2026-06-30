@@ -1,5 +1,5 @@
 ui = true
-
+api_addr = "http://vault.vidyapractice.online:8200"
 
 storage "file" {
   path = "/opt/vault/data"
