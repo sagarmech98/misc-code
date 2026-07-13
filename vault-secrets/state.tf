@@ -1,5 +1,5 @@
 provider "vault" {
-  address = "http://vault.vidyapractice.online:8200"
+  address = "http://vault-int.vidyapractice.online:8200"
   token   = var.token
 }
 
