@@ -1,3 +1,11 @@
+- name: setenforce 
+  ansible.builtin.command: setenforce 0
+
+- name: Start Service
+  ansible.builtin.systemd_service:
+    name: firewalld
+    state: stopped
+
 - name: Download repo file
   ansible.builtin.get_url:
     url: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
