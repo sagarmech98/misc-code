@@ -75,7 +75,7 @@ variable "values" {
         cart_url      = "http://cart-dev.vidyapractice.online:8080/"
         payment_url   = "http://payment-dev.vidyapractice.online:8080/"
         shipping_url  = "http://shipping-dev.vidyapractice.online:8080/"
-        CATALOGUE_HOST = "catalogue-dev.vidyapractice.online:8080/"
+        CATALOGUE_HOST = "catalogue-dev.vidyapractice.online"
         CATALOGUE_PORT = 8080
         USER_HOST      = "user-dev.vidyapractice.online"
         USER_PORT      = 8080
