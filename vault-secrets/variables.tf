@@ -59,7 +59,7 @@ variable "values" {
       value = {
         CART_HOST="cart-dev.vidyapractice.online"
         CART_PORT="8080"
-        USER_HOST="user"
+        USER_HOST="user-dev.vidyapractice.online"
         USER_PORT="8080"
         AMQP_HOST="rabbitmq-dev.vidyapractice.online"
         AMQP_USER="roboshop"
@@ -77,13 +77,13 @@ variable "values" {
         shipping_url  = "http://shipping-dev.vidyapractice.online:8080/"
         CATALOGUE_HOST = "catalogue-dev.vidyapractice.online:8080/"
         CATALOGUE_PORT = 8080
-        USER_HOST      = "user-dev.vidyapractice.online:8080/"
+        USER_HOST      = "user-dev.vidyapractice.online"
         USER_PORT      = 8080
-        CART_HOST      = "cart-dev.vidyapractice.online:8080/"
+        CART_HOST      = "cart-dev.vidyapractice.online" 
         CART_PORT      = 8080
-        SHIPPING_HOST  = "shipping-dev.vidyapractice.online:8080/"
+        SHIPPING_HOST  = "shipping-dev.vidyapractice.online"
         SHIPPING_PORT  = 8080
-        PAYMENT_HOST   = "payment-dev.vidyapractice.online:8080/"
+        PAYMENT_HOST   = "payment-dev.vidyapractice.online"
         PAYMENT_PORT   = 8080
       }
     }
