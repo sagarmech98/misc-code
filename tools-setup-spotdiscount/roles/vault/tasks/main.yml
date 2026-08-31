@@ -13,6 +13,13 @@
     src: vault.hcl
     dest: /etc/vault.d/vault.hcl
 
+- name: Open Vault port 8200 in firewalld
+  ansible.posix.firewalld:
+    port: 8200/tcp
+    permanent: yes
+    state: enabled
+    immediate: yes
+    
 - name: Start Vault service
   ansible.builtin.systemd_service:
     name: vault
