@@ -44,7 +44,7 @@ variable "values" {
     shipping = {
       secret = "roboshop-dev"
       value = {
-        CART_ENDPOINT = "cart-dev.vidyapractice.online"
+        CART_ENDPOINT = "cart-dev.vidyapractice.online:8080"
         DB_HOST       = "mysql-dev.vidyapractice.online"
         DB_USER       = "root"
         DB_PASS       = "RoboShop@1"
